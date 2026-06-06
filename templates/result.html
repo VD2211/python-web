@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+    <h1>Analysis Results</h1>
+    
+    <h3>Your Text:</h3>
+    <p style="background: #f4f4f4; padding: 15px;">{{ content }}</p>
+    
+    <h3>Stats:</h3>
+    <ul>
+        <li><strong>Word Count:</strong> {{ words }}</li>
+        <li><strong>Character Count:</strong> {{ chars }}</li>
+    </ul>
+    
+    <a href="{{ url_for('post') }}" class="btn">Analyze More Text</a>
+</div>
+{% endblock %}

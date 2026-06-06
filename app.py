@@ -158,8 +158,13 @@ def post():
         return render_template('post.html', name=name, title=name)
     if request.method == 'POST':
         content = request.form['content']
-        print(content)
-        return redirect(url_for('result'))
+
+        # Calculate text analyer data (examples)
+        num_chars = len(content)
+        num_words = len(content.split())
+
+        #  Render the result template directly and pass the variables into it
+        return render_template('result.html', content=content, words=num_words, chars=num_chars)
     
 if __name__ == '__main__':
     # for deployment
