@@ -1,0 +1,7 @@
+
+# Chặn các file rác của Python ở thư mục gốc
+**/__pycache__/
+*.pyc
+
+# Chặn file cấu hình bảo mật môi trường nếu có
+.env
